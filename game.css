@@ -1,0 +1,38 @@
+/* Set the overall background color of the game */
+body {
+  background-color: black;
+}
+
+.tennisCourt {
+  width: 1000px;
+  height: 500px;
+  border: 1px solid white;
+  background-color: green;
+}
+.tennisBall {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: absolute;
+  top: 250px;
+  left: 500px;
+}
+
+.playerOne {
+  left: 100px;
+  background-color: fuchsia;
+}
+
+.playerTwo {
+  right: 100px;
+  background-color: fuchsia;
+}
+
+.result {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
