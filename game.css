@@ -1,13 +1,14 @@
-/* Set the overall background color of the game */
 body {
   background-color: black;
+  display: flex;
+  justify-content: center;
 }
 
 .tennisCourt {
   width: 1000px;
   height: 500px;
   border: 1px solid white;
-  background-color: green;
+  background-color: rgb(2, 165, 2);
 }
 .tennisBall {
   width: 20px;
@@ -15,24 +16,41 @@ body {
   border-radius: 50%;
   background-color: yellow;
   position: absolute;
-  top: 250px;
-  left: 500px;
+  top: 240px;
+  left: 950px;
 }
 
-.playerOne {
-  left: 100px;
-  background-color: fuchsia;
+.playerOneTennisRacket {
+  width: 20px;
+  height: 125px;
+  position: absolute;
+  left: 470px;
+  top: 187.5px;
+  background-color: white;
+  border-radius: 5px;
 }
 
-.playerTwo {
-  right: 100px;
-  background-color: fuchsia;
+.playerTwoTennisRacket {
+  width: 20px;
+  height: 125px;
+  position: absolute;
+  right: 470px;
+  top: 187.5px;
+  background-color: white;
+  border-radius: 5px;
 }
 
-.result {
+.playerOneScore {
   font-size: 20px;
   color: white;
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 200px;
+}
+.playerTwoScore {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 200px;
 }
