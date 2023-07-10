@@ -1,56 +1,116 @@
 body {
   background-color: black;
+}
+main {
+  background-color: black;
   display: flex;
   justify-content: center;
+  /* padding-bottom: 5vh;
+  padding-top: 5vh; */
 }
 
 .tennisCourt {
-  width: 1000px;
-  height: 500px;
+  width: 52vw;
+  height: 57vh;
   border: 1px solid white;
   background-color: rgb(2, 165, 2);
 }
+.divLine {
+  width: 5px;
+  height: 57vh;
+  background-color: white;
+  position: absolute;
+  left: 49.9vw;
+}
+.medCircle {
+  width: 15vw;
+  height: 30vh;
+  border-radius: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white;
+  position: absolute;
+  top: 14vh;
+  left: 42.2vw;
+}
 .tennisBall {
-  width: 20px;
-  height: 20px;
+  width: 1vw;
+  height: 1vw;
   border-radius: 50%;
   background-color: yellow;
   position: absolute;
-  top: 240px;
-  left: 950px;
+  top: 27vh;
+  left: 49.5vw;
 }
 
-.playerOneTennisRacket {
-  width: 20px;
-  height: 125px;
+.playerTwoTennisRacket {
+  width: 1vw;
+  height: 15vh;
   position: absolute;
-  left: 470px;
-  top: 187.5px;
+  left: 24.3vw;
+  top: 20vh;
+  right: auto;
+  bottom: auto;
   background-color: white;
   border-radius: 5px;
 }
 
-.playerTwoTennisRacket {
-  width: 20px;
-  height: 125px;
+.playerOneTennisRacket {
+  width: 1vw;
+  height: 15vh;
   position: absolute;
-  right: 470px;
-  top: 187.5px;
+  right: 24.3vw;
+  top: 20vh;
+  left: auto;
+  bottom: auto;
   background-color: white;
   border-radius: 5px;
 }
 
 .playerOneScore {
-  font-size: 20px;
+  font-size: 1.3vw;
   color: white;
   position: absolute;
-  top: 20px;
-  right: 200px;
+  top: 2.3vh;
+  right: 10.5vw;
 }
 .playerTwoScore {
-  font-size: 20px;
+  font-size: 1.3vw;
   color: white;
   position: absolute;
-  top: 20px;
-  left: 200px;
+  top: 2.3vh;
+  left: 13vw;
+  right: auto;
+  bottom: auto;
+}
+.playerOne {
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 2.1vh;
+  right: 12vw;
+  left: auto;
+  bottom: auto;
+}
+.playerTwo {
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 2.1vh;
+  left: 1.5vw;
+  right: auto;
+  bottom: auto;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+button {
+  width: 20vw;
+  height: 5vw;
 }

@@ -7,12 +7,21 @@
 </head>
 
 <body>
-    <div class="tennisCourt">
-        <div class="tennisBall"></div>
-        <div class="playerOneTennisRacket"></div>
-        <div class="playerTwoTennisRacket"></div>
-        <div class="playerOneScore">player1 score:</div>
-        <div class="playerTwoScore">player2 score:</div>
+    <main>
+        <div id="tCourt" class="tennisCourt">
+            <div class="divLine"></div>
+            <div class="medCircle"></div>
+            <div id="ball" class="tennisBall"></div>
+            <div id="racket1" class="playerOneTennisRacket"></div>
+            <div id="racket2" class="playerTwoTennisRacket"></div>
+            <div id="pOne" class="playerOne">Player1 Score: </div>
+            <div id="pScoreOne" class="playerOneScore">0</div>
+            <div id="pTwo" class="playerTwo">Player2 Score: </div>
+            <div id="pScoreTwo" class="playerTwoScore">0</div>
+        </div>
+    </main>
+    <div class="start">
+        <button>START</button>
     </div>
     <script src="game.js"></script>
 </body>
