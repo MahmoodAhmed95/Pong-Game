@@ -3,18 +3,18 @@
 //
 // contorol player one racket
 let racket1 = document.getElementById("racket1");
-let actualTopPx = 20;
-console.log(actualTopPx);
+let actualTopVh = 20;
+// console.log(actualTopVh);
 function moveRacket1(event) {
-  if (event.keyCode === 38 && actualTopPx > 2) {
-    actualTopPx -= 2;
+  if (event.keyCode === 38 && actualTopVh > 2) {
+    actualTopVh -= 2;
     // console.log("111" + actualTopPx);
   }
-  if (event.keyCode === 40 && actualTopPx < 42) {
-    actualTopPx += 2;
+  if (event.keyCode === 40 && actualTopVh < 42) {
+    actualTopVh += 2;
     // console.log(actualTopPx);
   }
-  racket1.style.top = actualTopPx + "vh";
+  racket1.style.top = actualTopVh + "vh";
 }
 //
 //
@@ -22,19 +22,19 @@ function moveRacket1(event) {
 //
 // control player two racket
 let racket2 = document.getElementById("racket2");
-let actualTopPx1 = 20;
-console.log(actualTopPx1);
+let actualTopVh1 = 20;
+// console.log(actualTopVh1);
 
 function moveRacket2(event) {
-  if (event.keyCode === 87 && actualTopPx1 > 2) {
-    actualTopPx1 -= 2;
+  if (event.keyCode === 87 && actualTopVh1 > 2) {
+    actualTopVh1 -= 2;
     // console.log(actualTopPx1);
   }
-  if (event.keyCode === 83 && actualTopPx1 < 42) {
-    actualTopPx1 += 2;
+  if (event.keyCode === 83 && actualTopVh1 < 42) {
+    actualTopVh1 += 2;
     // console.log(actualTopPx1);
   }
-  racket2.style.top = actualTopPx1 + "vh";
+  racket2.style.top = actualTopVh1 + "vh";
 }
 window.addEventListener("keydown", moveRacket1);
 window.addEventListener("keydown", moveRacket2);
@@ -84,8 +84,9 @@ function moveBall(
     ballLocation.bottom <= racket1Location.bottom
   ) {
     // determinesDirectionHorizontally = 1;
-    horizontalDistance = Math.floor(Math.random() * 4) + 2;
-    verticalDistance = Math.floor(Math.random() * 4) + 2;
+    horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
+    verticalDistance = 5; //Math.floor(Math.random() * 4) + 2;
+    console.log("the ball moving");
   }
   // let the ball move every where
   if (
@@ -94,8 +95,9 @@ function moveBall(
     ballLocation.bottom <= racket2Location.bottom
   ) {
     // determinesDirectionHorizontally = 0;
-    horizontalDistance = Math.floor(Math.random() * 4) + 2;
-    verticalDistance = Math.floor(Math.random() * 4) + 2;
+    horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
+    verticalDistance = 5; //Math.floor(Math.random() * 4) + 2;
+    console.log("the ball moving");
   }
   // if the ball hit the left racket by ball left side
   if (ballLocation.left <= racket2Location.right) {
@@ -104,8 +106,8 @@ function moveBall(
       ballLocation.bottom <= racket2Location.bottom
     ) {
       determinesDirectionHorizontally = 1;
-      horizontalDistance = Math.floor(Math.random() * 4) + 2;
-      verticalDistance = Math.floor(Math.random() * 4) + 2;
+      horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
+      verticalDistance = 5; // Math.floor(Math.random() * 4) + 2;
     }
   }
 
@@ -116,8 +118,8 @@ function moveBall(
       ballLocation.bottom <= racket1Location.bottom
     ) {
       determinesDirectionHorizontally = 0;
-      horizontalDistance = Math.floor(Math.random() * 4) + 2;
-      verticalDistance = Math.floor(Math.random() * 4) + 2;
+      horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
+      verticalDistance = 5; //Math.floor(Math.random() * 4) + 2;
       // determinesDirectionVertically = 1;
       console.log("hit it the racket1..");
     }
@@ -128,6 +130,10 @@ function moveBall(
     score1.innerText = parseInt(score1.innerText) + 1;
     ball.style.left = 49.5 + "vw";
     ball.style.top = 27 + "vh";
+    // racket1.style.right = 24.3 + "vw";
+    // racket1.style.top = 20 + "vh";
+    // racket2.style.left = 24.3 + "vw";
+    // racket2.style.top = 20 + "vh";
     return;
   }
   // if ball location less than the court right horizontaliy player Two score goal and return the ball to center
@@ -136,6 +142,10 @@ function moveBall(
     score2.innerText = parseInt(score2.innerText) + 1;
     ball.style.left = 49.5 + "vw";
     ball.style.top = 27 + "vh";
+    // racket1.style.right = 24.3 + "vw";
+    // racket1.style.top = 20 + "vh";
+    // racket2.style.left = 24.3 + "vw";
+    // racket2.style.top = 20 + "vh";
     return;
   }
   ball.style.top =
@@ -156,8 +166,14 @@ function moveBall(
     );
   });
 }
+// moveBall();
+
 function start(event) {
   if (event.keyCode === 32) {
+    // racket1.style.right = 24.3 + "vw";
+    // racket1.style.top = 20 + "vh";
+    // racket2.style.left = 24.3 + "vw";
+    // racket2.style.top = 20 + "vh";
     moveBall();
   }
 }
