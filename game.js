@@ -8,13 +8,9 @@ let actualTopVh = 20;
 function moveRacket1(event) {
   if (event.keyCode === 38 && actualTopVh > 2) {
     actualTopVh -= 2;
-    // console.log("111" + actualTopPx);
-    console.log("after click" + racket1.style.top);
   }
   if (event.keyCode === 40 && actualTopVh < 42) {
     actualTopVh += 2;
-    // console.log(actualTopPx);
-    console.log("after click" + racket1.style.top);
   }
   racket1.style.top = actualTopVh + "vh";
 }
@@ -51,8 +47,21 @@ let ball = document.getElementById("ball");
 let court = document.getElementById("tCourt");
 let score1 = document.getElementById("pScoreOne");
 let score2 = document.getElementById("pScoreTwo");
-let speed = document.getElementById("speed");
-
+// drag drop speed value
+let sp = document.getElementById("speed");
+let speed = sp.value;
+sp.addEventListener("change", function () {
+  speed = sp.value;
+});
+// drag drop color value
+let col = document.getElementById("color");
+let colors = col.value;
+col.addEventListener("change", function () {
+  colors = col.value;
+});
+//change the tennis court background color
+court.style.backgroundColor = colors;
+console.log(colors);
 // function to move the ball
 function moveBall(
   horizontalDistance,
@@ -86,8 +95,8 @@ function moveBall(
     ballLocation.bottom <= racket1Location.bottom
   ) {
     // determinesDirectionHorizontally = 1;
-    horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
-    verticalDistance = 5; //Math.floor(Math.random() * 4) + 2;
+    horizontalDistance = parseInt(speed); //Math.floor(Math.random() * 4) + 2;
+    verticalDistance = parseInt(speed); //Math.floor(Math.random() * 4) + 2;
   }
   // let the ball move every where
   if (
@@ -95,8 +104,8 @@ function moveBall(
     ballLocation.top >= racket2Location.top &&
     ballLocation.bottom <= racket2Location.bottom
   ) {
-    horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
-    verticalDistance = 5; //Math.floor(Math.random() * 4) + 2;
+    horizontalDistance = parseInt(speed); //Math.floor(Math.random() * 4) + 2;
+    verticalDistance = parseInt(speed); //Math.floor(Math.random() * 4) + 2;
     console.log("the ball moving");
   }
   // if the ball hit the left racket by ball left side
@@ -106,8 +115,8 @@ function moveBall(
       ballLocation.bottom <= racket2Location.bottom
     ) {
       determinesDirectionHorizontally = 1;
-      horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
-      verticalDistance = 5; // Math.floor(Math.random() * 4) + 2;
+      horizontalDistance = parseInt(speed); //Math.floor(Math.random() * 4) + 2;
+      verticalDistance = parseInt(speed); // Math.floor(Math.random() * 4) + 2;
     }
   }
 
@@ -118,8 +127,8 @@ function moveBall(
       ballLocation.bottom <= racket1Location.bottom
     ) {
       determinesDirectionHorizontally = 0;
-      horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
-      verticalDistance = 5; //Math.floor(Math.random() * 4) + 2;
+      horizontalDistance = parseInt(speed); //Math.floor(Math.random() * 4) + 2;
+      verticalDistance = parseInt(speed); //Math.floor(Math.random() * 4) + 2;
     }
   }
   // if ball location less than the court left horizontaliy player one score goal and return the ball to center
@@ -164,7 +173,7 @@ function moveBall(
     );
   });
 }
-let button = document.getElementById("st");
+let StartButton = document.getElementById("st");
 let oneClick = false;
 function start() {
   if (oneClick == false) {
@@ -178,4 +187,8 @@ function start() {
     moveBall();
   }
 }
-button.addEventListener("click", start);
+StartButton.addEventListener("click", start);
+let reatartButton = document.getElementById("rs");
+reatartButton.addEventListener("click", function () {
+  location.reload();
+});
