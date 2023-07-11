@@ -9,10 +9,12 @@ function moveRacket1(event) {
   if (event.keyCode === 38 && actualTopVh > 2) {
     actualTopVh -= 2;
     // console.log("111" + actualTopPx);
+    console.log("after click" + racket1.style.top);
   }
   if (event.keyCode === 40 && actualTopVh < 42) {
     actualTopVh += 2;
     // console.log(actualTopPx);
+    console.log("after click" + racket1.style.top);
   }
   racket1.style.top = actualTopVh + "vh";
 }
@@ -49,6 +51,7 @@ let ball = document.getElementById("ball");
 let court = document.getElementById("tCourt");
 let score1 = document.getElementById("pScoreOne");
 let score2 = document.getElementById("pScoreTwo");
+let speed = document.getElementById("speed");
 
 // function to move the ball
 function moveBall(
@@ -61,12 +64,11 @@ function moveBall(
   let racket1Location = racket1.getBoundingClientRect();
   let racket2Location = racket2.getBoundingClientRect();
   let courtCoord = court.getBoundingClientRect();
-
   // if player one score 10 goals message player one win
-  if (parseInt(score1.innerHTML) == 10) {
+  if (parseInt(score1.innerHTML) == 5) {
     return console.log("player one win!");
     // if player two score 10 goals message player two win
-  } else if (parseInt(score2.innerHTML) == 10) {
+  } else if (parseInt(score2.innerHTML) == 5) {
     return console.log("player two win!");
   }
   // if the ball location less than or equal the court top go up by increase the vertical px
@@ -86,7 +88,6 @@ function moveBall(
     // determinesDirectionHorizontally = 1;
     horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
     verticalDistance = 5; //Math.floor(Math.random() * 4) + 2;
-    console.log("the ball moving");
   }
   // let the ball move every where
   if (
@@ -94,7 +95,6 @@ function moveBall(
     ballLocation.top >= racket2Location.top &&
     ballLocation.bottom <= racket2Location.bottom
   ) {
-    // determinesDirectionHorizontally = 0;
     horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
     verticalDistance = 5; //Math.floor(Math.random() * 4) + 2;
     console.log("the ball moving");
@@ -120,8 +120,6 @@ function moveBall(
       determinesDirectionHorizontally = 0;
       horizontalDistance = 5; //Math.floor(Math.random() * 4) + 2;
       verticalDistance = 5; //Math.floor(Math.random() * 4) + 2;
-      // determinesDirectionVertically = 1;
-      console.log("hit it the racket1..");
     }
   }
   // if ball location less than the court left horizontaliy player one score goal and return the ball to center
@@ -130,10 +128,10 @@ function moveBall(
     score1.innerText = parseInt(score1.innerText) + 1;
     ball.style.left = 49.5 + "vw";
     ball.style.top = 27 + "vh";
-    // racket1.style.right = 24.3 + "vw";
-    // racket1.style.top = 20 + "vh";
-    // racket2.style.left = 24.3 + "vw";
-    // racket2.style.top = 20 + "vh";
+    if (parseInt(score1.innerText) == 5) {
+      alert("Player One win!!");
+    }
+    oneClick = false;
     return;
   }
   // if ball location less than the court right horizontaliy player Two score goal and return the ball to center
@@ -142,10 +140,10 @@ function moveBall(
     score2.innerText = parseInt(score2.innerText) + 1;
     ball.style.left = 49.5 + "vw";
     ball.style.top = 27 + "vh";
-    // racket1.style.right = 24.3 + "vw";
-    // racket1.style.top = 20 + "vh";
-    // racket2.style.left = 24.3 + "vw";
-    // racket2.style.top = 20 + "vh";
+    if (parseInt(score2.innerText) == 5) {
+      alert("Player Two win!!");
+    }
+    oneClick = false;
     return;
   }
   ball.style.top =
@@ -166,15 +164,18 @@ function moveBall(
     );
   });
 }
-// moveBall();
-
-function start(event) {
-  if (event.keyCode === 32) {
-    // racket1.style.right = 24.3 + "vw";
-    // racket1.style.top = 20 + "vh";
-    // racket2.style.left = 24.3 + "vw";
-    // racket2.style.top = 20 + "vh";
+let button = document.getElementById("st");
+let oneClick = false;
+function start() {
+  if (oneClick == false) {
+    oneClick = true;
+    //return racket1 to its default location
+    racket1.style.top = 20 + "vh";
+    actualTopVh = 20;
+    //return racket2 to its default location
+    racket2.style.top = 20 + "vh";
+    actualTopVh1 = 20;
     moveBall();
   }
 }
-window.addEventListener("keydown", start);
+button.addEventListener("click", start);

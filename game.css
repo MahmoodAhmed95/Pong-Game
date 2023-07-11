@@ -109,8 +109,17 @@ main {
   justify-content: center;
   align-items: center;
   margin-top: 5vh;
+  gap: 10vw;
 }
 button {
   width: 20vw;
   height: 5vw;
+}
+.dragDrop {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+label {
+  /* background-color: aqua; */
+  color: white;
 }
