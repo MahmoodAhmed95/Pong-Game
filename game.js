@@ -56,12 +56,13 @@ sp.addEventListener("change", function () {
 // drag drop color value
 let col = document.getElementById("color");
 let colors = col.value;
+//change the tennis court background color
 col.addEventListener("change", function () {
   colors = col.value;
+  court.style.backgroundColor = colors;
 });
 //change the tennis court background color
 court.style.backgroundColor = colors;
-console.log(colors);
 // function to move the ball
 function moveBall(
   horizontalDistance,
@@ -73,13 +74,6 @@ function moveBall(
   let racket1Location = racket1.getBoundingClientRect();
   let racket2Location = racket2.getBoundingClientRect();
   let courtCoord = court.getBoundingClientRect();
-  // if player one score 10 goals message player one win
-  if (parseInt(score1.innerHTML) == 5) {
-    return console.log("player one win!");
-    // if player two score 10 goals message player two win
-  } else if (parseInt(score2.innerHTML) == 5) {
-    return console.log("player two win!");
-  }
   // if the ball location less than or equal the court top go up by increase the vertical px
   if (ballLocation.top <= courtCoord.top) {
     determinesDirectionVertically = 1;
@@ -138,7 +132,8 @@ function moveBall(
     ball.style.left = 49.5 + "vw";
     ball.style.top = 27 + "vh";
     if (parseInt(score1.innerText) == 5) {
-      alert("Player One win!!");
+      alert(`Player One win!! ${score1.innerText} - ${score2.innerText}`);
+      location.reload();
     }
     oneClick = false;
     return;
@@ -150,7 +145,8 @@ function moveBall(
     ball.style.left = 49.5 + "vw";
     ball.style.top = 27 + "vh";
     if (parseInt(score2.innerText) == 5) {
-      alert("Player Two win!!");
+      alert(`Player Two win!!  ${score2.innerText} - ${score1.innerText}`);
+      location.reload();
     }
     oneClick = false;
     return;

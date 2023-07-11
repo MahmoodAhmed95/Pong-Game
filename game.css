@@ -5,10 +5,7 @@ main {
   background-color: black;
   display: flex;
   justify-content: center;
-  /* padding-bottom: 5vh;
-  padding-top: 5vh; */
 }
-
 .tennisCourt {
   width: 52vw;
   height: 57vh;
@@ -119,7 +116,9 @@ button {
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
-label {
+.label {
   /* background-color: aqua; */
   color: white;
+  font-weight: bold;
+  font-size: 1.3vw;
 }
