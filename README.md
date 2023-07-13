@@ -3,7 +3,7 @@
 ![Alt text](<Screenshot from 2023-07-12 16-11-36.png>)
 
 This project is a browser game of Pong Game with Vanilla Javascript.
-Built With
+Built With:
 
 1. HTML
 2. CSS
@@ -37,7 +37,7 @@ Features:
 
 ![Alt text](<Screenshot from 2023-07-12 16-44-32.png>)
 
-**_Game Architecture and Challenges_**
+**Game Architecture and Challenges**
 
 Pong Game is a classic arcade video game that was originally released by Atari in 1972. The game is a simple two-player game that simulates table tennis. The objective of the game is to score 4 to 10(the user can choose is score level) goals against the opponent to win the game. There is also a lose state, where the player will lose the game if the opponent scores 4 to 10 (depend on the score level choosen) against them. The game will continue until one of the players reaches the winning score level.
 
@@ -45,10 +45,10 @@ Overall, this Pong game project is a fun and classic game that is perfect for tw
 
 The game is two player game. The game begins by clicking the ‘Start’ button.
 
-- HOW TO PLAY?
+- **How to play?**
   player one can move the racket by the arrows arrow up to move up and arrow down to move down , player two can move the racket by S to move down and W to move up.
 
-- A way to reset the board and play again?
+- **A way to reset the board and play again?**
   when one of the player score 4 to 10 ( depend on the score level choosen) goals an alert will appear after clicking the button the page will reloaded or when the user click on restart button it will reload the page and he can play again.
 
 **Win state**:when the player score 4 to 10 ( depend on the score level choosen) goals againest the other player.
