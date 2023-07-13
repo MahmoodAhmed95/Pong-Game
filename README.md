@@ -51,7 +51,8 @@ The game is two player game. The game begins by clicking the ‘Start’ button.
 - A way to reset the board and play again?
   when one of the player score 4 to 10 ( depend on the score level choosen) goals an alert will appear after clicking the button the page will reloaded or when the user click on restart button it will reload the page and he can play again.
 
-**WIN STATE**:
+**Win state**:
+
 when the player score 4 to 10 ( depend on the score level choosen) goals againest the other player.
 ![Alt text](<Screenshot from 2023-07-12 16-48-49.png>)
 
@@ -64,21 +65,21 @@ The game build can be divided into three technical challenges:
 
 **MOVEMENT**
 
-the ball moving around the court between the top and bottom and rebound.
-the ball can pass from left and righ to score a goal.
+- the ball moving around the court between the top and bottom and rebound.
+- the ball can pass from left and righ to score a goal.
 
 **COLLISION CHECK**
 
-accurately calculating the ball's movement and ensuring that it rebounds correctly.
-collision check with the bottom, and Top of the court.
-collision check with the rackets when the ball hit one of them.
+- accurately calculating the ball's movement and ensuring that it rebounds correctly.
+- collision check with the bottom, and Top of the court.
+- collision check with the rackets when the ball hit one of them.
 
 **Future improvements**
 
-Playing VS computer - let the player compete against the computer.
-Designing - introduce a new design to the game to make it more visually appealing.
-Playing Online - connect the game to the internet to let players challenge other players online.
-Leaderboard - develop a feature that gives the winning player online XP so they can compete globally and be the leaderboard leader.
+- Playing VS computer - let the player compete against the computer.
+- Designing - introduce a new design to the game to make it more visually appealing.
+- Playing Online - connect the game to the internet to let players challenge other players online.
+- Leaderboard - develop a feature that gives the winning player online XP so they can compete globally and be the leaderboard leader.
 
 **Author**
 
