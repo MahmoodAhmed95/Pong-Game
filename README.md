@@ -5,9 +5,9 @@
 This project is a browser game of Pong Game with Vanilla Javascript.
 Built With
 
-    1. HTML
-    2. CSS
-    3. Javascript
+1. HTML
+2. CSS
+3. Javascript
 
 **Deployment**
 
