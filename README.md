@@ -51,15 +51,13 @@ The game is two player game. The game begins by clicking the ‘Start’ button.
 - A way to reset the board and play again?
   when one of the player score 4 to 10 ( depend on the score level choosen) goals an alert will appear after clicking the button the page will reloaded or when the user click on restart button it will reload the page and he can play again.
 
-**Win state**:
-
-when the player score 4 to 10 ( depend on the score level choosen) goals againest the other player.
+**Win state**:when the player score 4 to 10 ( depend on the score level choosen) goals againest the other player.
 ![Alt text](<Screenshot from 2023-07-12 16-48-49.png>)
 
-- Explain the technical details?
-  In terms of technical details, the game uses JavaScript to calculate the ball's movement in the court and to make it rebound when it hits the rackets.
-  when the game start the ball will immeidiatly move.
-  the ball moves vertically and horizontally by increasing the value of x and y at the same time.
+**Technical details?**
+In terms of technical details, the game uses JavaScript to calculate the ball's movement in the court and to make it rebound when it hits the rackets.
+when the game start the ball will immeidiatly move.
+the ball moves vertically and horizontally by increasing the value of x and y at the same time.
 
 The game build can be divided into three technical challenges:
 
