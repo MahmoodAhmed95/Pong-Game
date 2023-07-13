@@ -13,7 +13,7 @@ main {
   background-color: rgb(2, 165, 2);
 }
 .divLine {
-  width: 5px;
+  width: 0.3vw;
   height: 57vh;
   background-color: white;
   position: absolute;
@@ -23,7 +23,7 @@ main {
   width: 15vw;
   height: 30vh;
   border-radius: 50%;
-  border-width: 5px;
+  border-width: 0.3vw;
   border-style: solid;
   border-color: white;
   position: absolute;
@@ -120,5 +120,5 @@ button {
   /* background-color: aqua; */
   color: white;
   font-weight: bold;
-  font-size: 1.3vw;
+  font-size: 1vw;
 }

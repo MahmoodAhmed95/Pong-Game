@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function () {
   const racket1 = document.getElementById("racket1");
   const racket2 = document.getElementById("racket2");
   let actualTopVh1 = 20;
@@ -52,12 +52,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let court = document.getElementById("tCourt");
   let score1 = document.getElementById("pScoreOne");
   let score2 = document.getElementById("pScoreTwo");
-  // drag drop speed value
-  let sp = document.getElementById("speed");
-  let speed = sp.value;
-  sp.addEventListener("change", function () {
-    speed = sp.value;
-  });
   // drag drop color value
   let col = document.getElementById("color");
   let colors = col.value;
@@ -68,6 +62,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
   //change the tennis court background color
   court.style.backgroundColor = colors;
+  // drag drop speed value
+  let score = document.getElementById("score");
+  let scoreLevel = score.value;
+  score.addEventListener("change", function () {
+    scoreLevel = score.value;
+  });
+  // drag drop speed value
+  let sp = document.getElementById("speed");
+  let speed = sp.value;
+  sp.addEventListener("change", function () {
+    speed = sp.value;
+  });
   // function to move the ball
   function moveBall(
     horizontalDistance,
@@ -135,7 +141,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
       score1.innerText = parseInt(score1.innerText) + 1;
       ball.style.left = 49.5 + "vw";
       ball.style.top = 27 + "vh";
-      if (parseInt(score1.innerText) == 5) {
+      //return racket1 to its default location
+      racket1.style.top = 20 + "vh";
+      actualTopVh1 = 20;
+      //return racket2 to its default location
+      racket2.style.top = 20 + "vh";
+      actualTopVh2 = 20;
+      moveBall();
+      if (parseInt(score1.innerText) == parseInt(scoreLevel)) {
         alert(`Player One win!! ${score1.innerText} - ${score2.innerText}`);
         location.reload();
       }
@@ -148,7 +161,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
       score2.innerText = parseInt(score2.innerText) + 1;
       ball.style.left = 49.5 + "vw";
       ball.style.top = 27 + "vh";
-      if (parseInt(score2.innerText) == 5) {
+      //return racket1 to its default location
+      racket1.style.top = 20 + "vh";
+      actualTopVh1 = 20;
+      //return racket2 to its default location
+      racket2.style.top = 20 + "vh";
+      actualTopVh2 = 20;
+      moveBall();
+      if (parseInt(score2.innerText) == parseInt(scoreLevel)) {
         alert(`Player Two win!!  ${score2.innerText} - ${score1.innerText}`);
         location.reload();
       }
