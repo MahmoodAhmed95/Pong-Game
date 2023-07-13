@@ -18,25 +18,25 @@ Installation
 Use the clone button to download the game source code. Open the game.html file in your browser and the game should start, if not check console for any issues. No images or local audio files where used so the game should work on any machine.
 Features:
 
-    - Responsive mobile design
+    -Responsive mobile design
+    The game is designed to be responsive to different screen sizes using the viewport height and viewport width units for sizing.
 
 ![Alt text](<Screenshot from 2023-07-13 09-58-58.png>)
-The game is designed to be responsive to different screen sizes using the viewport height and viewport width units for sizing.
 
-    -you can choose the ball moving speed.
+    -Speed customization
+    Players can choose the ball moving speed, which changes depending on the level.
 
 ![Alt text](<Screenshot from 2023-07-12 16-48-00.png>)
-Speed change depending on the level
 
-    - you can choose how many goals you score to win.
+    -Scoring customization
+    Players can choose how many goals they need to score to win Keeping track of the score and level.
 
 ![Alt text](<Screenshot from 2023-07-12 16-47-42.png>)
-Keeping of the Score and Level
 
-    -you can choose the background color.
+    -Background color customization
+    Users can choose the background color they prefer.
 
 ![Alt text](<Screenshot from 2023-07-12 16-44-32.png>)
-the user choose the color he prefere it
 
 Game Architecture and Challenges
 
@@ -75,20 +75,11 @@ COLLISION CHECK
 
 Future improvements
 
-    Playing VS computer - let the player compete the computer.
-    Designing - new design to the game to be more special.
-    Playing Online - connect the game to the internet to let the player challenge other player online.
-    Leader board - developing feature to give the winner player online xp so he can compete globally and be the board leader.
+    Playing VS computer - let the player compete against the computer.
+    Designing - introduce a new design to the game to make it more visually appealing.
+    Playing Online - connect the game to the internet to let players challenge other players online.
+    Leaderboard - develop a feature that gives the winning player online XP so they can compete globally and be the leaderboard leader.
 
 Author
 
 Mahmood Ahmed
-
-- Explain the technical challenges?
-  The technical challenges of this project include accurately calculating the ball's movement and ensuring that it rebounds correctly.
-  1-the calculation to move the ball in the court
-  2-how to let the ball rebound when it hit the rackets
-
-- Explain which improvements you might make?
-  1-I might improve the design
-  2- add option to play VS computer
