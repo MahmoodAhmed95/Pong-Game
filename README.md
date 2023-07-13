@@ -17,22 +17,22 @@ Installation
 Use the clone button to download the game source code. Open the game.html file in your browser and the game should start, if not check console for any issues. No images or local audio files where used so the game should work on any machine.
 Features:
 
-- Responsive mobile design
+- **Responsive mobile design**:
   The game is designed to be responsive to different screen sizes using the viewport height and viewport width units for sizing.
 
 ![Alt text](<Screenshot from 2023-07-13 09-58-58.png>)
 
-- Speed customization
+- **Speed customization**:
   Players can choose the ball moving speed, which changes depending on the level.
 
 ![Alt text](<Screenshot from 2023-07-12 16-48-00.png>)
 
-- Scoring customization
+- **Scoring customization**:
   Players can choose how many goals they need to score to win Keeping track of the score and level.
 
 ![Alt text](<Screenshot from 2023-07-12 16-47-42.png>)
 
-- Background color customization
+- **Background color customization**:
   Users can choose the background color they prefer.
 
 ![Alt text](<Screenshot from 2023-07-12 16-44-32.png>)
@@ -51,7 +51,7 @@ The game is two player game. The game begins by clicking the ‘Start’ button.
 - A way to reset the board and play again?
   when one of the player score 4 to 10 ( depend on the score level choosen) goals an alert will appear after clicking the button the page will reloaded or when the user click on restart button it will reload the page and he can play again.
 
-**WIN STATE**
+**WIN STATE**:
 when the player score 4 to 10 ( depend on the score level choosen) goals againest the other player.
 ![Alt text](<Screenshot from 2023-07-12 16-48-49.png>)
 
