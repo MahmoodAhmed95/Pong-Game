@@ -9,7 +9,7 @@ main {
 .tennisCourt {
   width: 52vw;
   height: 57vh;
-  border: 1px solid white;
+  border: 0.1vw solid white;
   background-color: rgb(2, 165, 2);
 }
 .divLine {

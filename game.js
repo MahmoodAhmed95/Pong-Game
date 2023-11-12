@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("keydown", keysPressed);
     document.addEventListener("keyup", keysReleased);
     let keys = {};
-    console.log(keys);
     // Functions for updating the array
     function keysPressed(e) {
       keys[e.key] = true;
@@ -137,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // if ball location less than the court left horizontaliy player one score goal and return the ball to center
     if (ballLocation.left <= courtCoord.left) {
-      console.log("player one score..");
+      // console.log("player one score.."); // need to be alert to see who's score
       score1.innerText = parseInt(score1.innerText) + 1;
       ball.style.left = 49.5 + "vw";
       ball.style.top = 27 + "vh";
@@ -157,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // if ball location less than the court right horizontaliy player Two score goal and return the ball to center
     if (ballLocation.right >= courtCoord.right) {
-      console.log("player two score..");
+      // console.log("player two score..");// need to be alert to see who's score
       score2.innerText = parseInt(score2.innerText) + 1;
       ball.style.left = 49.5 + "vw";
       ball.style.top = 27 + "vh";
